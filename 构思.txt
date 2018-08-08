@@ -1,0 +1,10 @@
+vux_app:
+tabbar:
+搜索，榜单，我的
+
+接口：
+搜索：/v2/movie/search?q={text}
+榜单：
+	正在热映： /v2/movie/in_theaters
+	top250: /v2/movie/top250
+	即将上映： /v2/movie/coming_soon
