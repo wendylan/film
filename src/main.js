@@ -6,7 +6,8 @@ import App from './App';
 import router from './router/index.js';
 import store from './vuex/store';
 import 'font-awesome/css/font-awesome.css';
-  
+
+Vue.prototype.HOME = 'https://api.douban.com/v2';
 // 开启debug模式
 Vue.config.debug = true;
 FastClick.attach(document.body);

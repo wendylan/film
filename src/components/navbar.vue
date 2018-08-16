@@ -26,4 +26,7 @@ export default {
 </script>
 
 <style>
+.weui-tabbar {
+  position: fixed!important;
+}
 </style>
