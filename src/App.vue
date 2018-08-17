@@ -5,7 +5,7 @@
             @on-click-back="clickBack" 
             :left-options="{preventGoBack: true, showBack: isShowBack, backText: ''}">电影资讯
         </x-header>
-        <search></search>
+        <search v-show="!isShowBack"></search>
 		<router-view></router-view>
 		<navbar v-show="!isShowBack"></navbar>
 	</div>

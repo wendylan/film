@@ -1,5 +1,5 @@
 <script>
-    import { Search } from 'vux';
+    import { AjaxPlugin, Search } from 'vux';
     export default {
         components:{
             Search,
@@ -12,13 +12,31 @@
         },
         methods:{
             getResult(value){
-                console.log('value-----', value);
+                let that = this;
+                AjaxPlugin.$http.get(this.HOME+'/movie/search?q='+ value +'&count=10').then((res)=>{
+                    that.results = res.data.subjects.map((item) => {
+                        return {title: item.title, key: item.id}
+                    })
+                });
             },
             onSubmit(val){
                 console.log('val--------', val);
+                if(this.value == ''){
+                    return;
+                }
+                if(this.id == ''){
+                    this.id = this.results[0].key;
+                }
+                this.value = '';
+                this.$refs.search.setBlur();
+                this.$router.push({ path: '/filmInfo', query: { id: this.id } });
+                this.$store.commit('updateBackStatus', {isShowBack: true});
             },
             resultClick(item){
                 console.log('item------', item);
+                this.value = item.title;
+                this.id = item.key;
+                this.$refs.search.setFocus();
             },
         },
     }

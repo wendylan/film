@@ -58,7 +58,7 @@
 <template>
     <div>
         <ul id="showing">
-            <li class="showing-li" v-for="(film, index) in films" :key="index">{{film.title}}
+            <li class="showing-li" v-for="(film, index) in films" :key="index">
                 <ShowingItem :film="film"></ShowingItem>
             </li>
             <loading v-model="isLoading"></loading>

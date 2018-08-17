@@ -3,6 +3,7 @@ tabbar:
 搜索，榜单，我的
 
 接口：
+详情： /v2/movie/subject/:id
 搜索：/v2/movie/search?q={text}
 榜单：
 	正在热映： /v2/movie/in_theaters
