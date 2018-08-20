@@ -40,7 +40,7 @@
     position: fixed;
     right: 10px;
     bottom: 56px;
-    background: #42C9A3;
+    background: #409eff;
     width: 35px;
     height: 35px;
     line-height: 35px;
