@@ -111,7 +111,6 @@ export default {
             <Divider v-show="count==max&&!isLoading">已经到底部啦</Divider>
         </ul>
         <loading v-model="isLoading"></loading>
-        <!-- <Divider v-show="!isLoading">已经到底部啦</Divider> -->
     </div>
 </template>
 <style lang='less'>

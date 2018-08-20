@@ -8,12 +8,14 @@
         <search v-show="!isShowBack"></search>
 		<router-view></router-view>
 		<navbar v-show="!isShowBack"></navbar>
+        <goTop></goTop>
 	</div>
 </template>
 
 <script>
 import navbar from "./components/navbar.vue";
 import search from "./components/search.vue";
+import goTop from "./components/goTop.vue";
 import { mapState } from 'vuex';
 import { XHeader } from 'vux';
 export default {
@@ -22,6 +24,7 @@ export default {
         navbar,
         search,
         XHeader,
+        goTop,
     },
     computed:{
         ...mapState({

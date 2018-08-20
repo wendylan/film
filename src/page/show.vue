@@ -15,9 +15,9 @@
             })
         },
         components:{
+            ShowingItem,
             Loading,
             Divider,
-            ShowingItem,
         },
         methods:{
             // 获取初始数据
