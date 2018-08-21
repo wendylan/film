@@ -40,6 +40,9 @@ export default {
             AjaxPlugin.$http.get('http://text.com').then(function(res){
                 console.log(res.data);
             });
+            AjaxPlugin.$http.post('http://texte.com/userInfo').then(function(res){
+                console.log(res.data);
+            });
         },
         clickBack(){
             this.$store.commit('updateBackStatus', {isShowBack: false});
