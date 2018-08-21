@@ -67,7 +67,7 @@
         <loading v-model="isLoading"></loading>
     </div>    
 </template>
-<style>
+<style lang="less">
 ul {
     display: flex;
     flex-flow: row wrap;
@@ -76,9 +76,10 @@ ul {
     list-style: none;
     padding: 1rem 0.7rem 0;
     margin-bottom: 54px;
-}
-.showing-li {
-    width: 100%;
+    overflow: hidden;
+    .showing-li {
+        width: 100%;
+    }
 }
 </style>
 

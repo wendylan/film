@@ -57,8 +57,5 @@ export default {
 body {
     background-color: #fbf9fe;
 }
-#showing, #ready {
-  position: absolute;
-//   top: 90px;
-}
+
 </style>

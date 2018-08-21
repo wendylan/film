@@ -38,7 +38,7 @@ export default {
 <template>
     <div class="film_box" @click="clickItem">
         <flexbox>
-            <flexbox-item :span="3">
+            <flexbox-item :span="4">
                 <img class="image" :src="film.images.medium">
             </flexbox-item>
             <flexbox-item>
@@ -74,6 +74,7 @@ export default {
 }
 .title-year {
     margin: 0.5rem 0;
+    width: 15rem;
     .title {
         font-size: 1.05rem;
     }
@@ -87,7 +88,6 @@ export default {
 }
 
 .director, .cast {
-    width: 67%; 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; 
