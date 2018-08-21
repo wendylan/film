@@ -13,11 +13,12 @@
 </template>
 
 <script>
+import mock from './mock.js';
 import navbar from "./components/navbar.vue";
 import search from "./components/search.vue";
 import goTop from "./components/goTop.vue";
 import { mapState } from 'vuex';
-import { XHeader } from 'vux';
+import { XHeader, AjaxPlugin } from 'vux';
 export default {
     name: "app",
     components: {
@@ -31,7 +32,15 @@ export default {
             isShowBack: state => state.isShowBack
         })
     },
+    created(){
+        this.getTest();
+    },
     methods:{
+        getTest(){
+            AjaxPlugin.$http.get('http://text.com').then(function(res){
+                console.log(res.data);
+            });
+        },
         clickBack(){
             this.$store.commit('updateBackStatus', {isShowBack: false});
             window.history.go(-1);
