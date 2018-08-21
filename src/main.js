@@ -7,6 +7,8 @@ import router from './router/index.js';
 import store from './vuex/store';
 import 'font-awesome/css/font-awesome.css';
 
+process.env.MOCK && (require('@/mock'));
+
 Vue.prototype.HOME = 'https://api.douban.com/v2';
 // 开启debug模式
 Vue.config.debug = true;

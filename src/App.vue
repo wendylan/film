@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import mock from './mock.js';
 import navbar from "./components/navbar.vue";
 import search from "./components/search.vue";
 import goTop from "./components/goTop.vue";
